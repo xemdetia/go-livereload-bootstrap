@@ -1,0 +1,27 @@
+* =go-livereload-bootstrap=
+
+This is a repository that is designed to work with the tool [[https://pkg.go.dev/golang.org/x/tools/cmd/gonew][gonew]].
+** Tooling Bootstrap
+First install the following tools:
+#+begin_src sh
+  # setup go normally
+  go install golang.org/x/tools/cmd/gonew@latest
+  go install github.com/go-task/task/v3/cmd/task@latest
+#+end_src
+
+This provides the ability to template a new project from this one on the local system as well as the designated task runner. These are installed separately.
+** New Module Initialization
+The goal is to do the following:
+
+#+begin_src sh
+  NEW_PROJECT="new-project"
+  gonew github.com/xemdetia/go-livereload-bootstrap $NEW_PROJECT
+  cd $NEW_PROJECT
+  task build
+  task air
+#+end_src
+
+
+
+
+

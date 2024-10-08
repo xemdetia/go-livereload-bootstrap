@@ -1,0 +1,15 @@
+version: '3'
+
+tasks:
+  build:
+    dir: build
+    cmds:
+      - go build -o "{{.ROOT_DIR}}/build" "{{.ROOT_DIR}}/cmd/api/api.go"
+
+  run:
+    cmds:
+      - build/api
+
+  air:
+    cmds:
+      - air

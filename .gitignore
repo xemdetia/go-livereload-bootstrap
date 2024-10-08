@@ -1,0 +1,5 @@
+# intermediate outputs
+build/*
+
+# where build errors from air go
+tmp/*
